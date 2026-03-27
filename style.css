@@ -1,0 +1,110 @@
+/* Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  color: white;
+  overflow: hidden;
+  background: black;
+}
+
+/* خلفية Neon متحركة */
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #00f0ff, #ff00c8, #00ff88, #002fff);
+  animation: moveBG 10s linear infinite;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+@keyframes moveBG {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-25%, -25%); }
+  100% { transform: translate(0,0); }
+}
+
+/* Loading */
+#loader {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Landing */
+.landing {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing button {
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: #00f0ff;
+  color: black;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.landing button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00f0ff;
+}
+
+/* الموقع */
+#main-site {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+
+/* القوائم */
+ul {
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+}
+
+/* النص */
+li {
+  margin: 10px;
+}
+
+/* كتابة */
+#typing {
+  color: #00f0ff;
+  margin-bottom: 20px;
+}
+
+/* قسم التواصل الاجتماعي */
+#contact {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+#contact a {
+  color: #00f0ff;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+.insta-icon {
+  color: #E1306C; /* لون الإنستجرام المميز */
+  margin-right: 5px;
+  font-size: 22px;
+  vertical-align: middle;
+}
